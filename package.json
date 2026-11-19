@@ -1,0 +1,13 @@
+{
+  "name": "algorithm-notebook",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "judge:build": "docker build -t algorithm-notebook-judge:1 judge",
+    "test": "node --test",
+    "test:judge": "JUDGE_INTEGRATION=1 node --test test/judge.test.js"
+  }
+}
